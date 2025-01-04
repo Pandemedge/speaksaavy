@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en"></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Layout</title>
+</head>
+
+<body>
+    <!-- / Guest Navbar -->
+    <header id="header" th:fragment="header">
+        <nav class = "navbar">
+            <div class="logo">
+                <a th:href="@{/home}">VET<span>CARE</span></a></div>
+            <ul class ="nav-menu">
+                <li class="basic-button"><a th:href="@{/about}">About</a></li>
+                <li class="basic-button"><a th:href="@{/education}">Education</a></li>
+                <li class="basic-button"><a th:href="@{/faqenq}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>
