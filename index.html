@@ -4,13 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Main Page</title>
 
 </head>
 <body>
+    <div id="header" style="min-height: 10%;">
+        <script>
+            fetch('/fragments/header.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('header').innerHTML = data;
+                });
+        </script>
+    </div>
+
     <div class="container">
-        <h1>A</h1>
+        <div class="content1">
+            <div class="fade-in-section">
+                <h1>Welcome to Speak Savvy</h1>
+                <p>
+                    At <b>Speak Savvy</b>, I believe that confident communication is the key to unlocking personal and
+                    professional success. Whether you're looking to improve your public speaking, strengthen your
+                    interpersonal skills, or refine your everyday conversations, I’m here to guide you every step of the
+                    way.
+                </p>
+                <p>                    
+                    With nearly four years of experience as a certified speech-language pathologist, I’ve helped
+                    individuals from all walks of life overcome their communication challenges. My coaching is
+                    designed to be approachable, professional, and tailored to your unique goals—because everyone
+                    deserves to feel heard and understood.
+                </p>
+
+                <h2>Why Choose Speak Savvy?</h2>
+                <p>
+                    I’ve been where you are. As someone who once struggled with communication and confidence, I
+                    know firsthand the impact that clear and authentic expression can have on your life.
+                </p>
+
+                <p style="text-align: left;"><b>My mission is to help you:</b></p>
+                <ul>
+                    <li>Build confidence in your voice.</li>
+                    <li>Communicate authentically while achieving your goals.</li>
+                    <li>Strengthen connections in both personal and professional relationships.</li>
+                </ul>
+                <br>
+                <p style="text-align: left;"><b>How I Can Help</b></p>
+                <ul>
+                    <li>Develop effective communication skills for personal and professional success.</li>
+                    <li>Overcome speech challenges in a supportive and understanding environment.</li>
+                    <li>Feel empowered to express your authentic self confidently.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content2">
+            <img src="/images/dog.jpg" alt="placeholder">
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const fadeInSections = document.querySelectorAll(".fade-in-section");
+    
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                }, { threshold: 0.1 });
+    
+                fadeInSections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+    </div>
+
+    <div class="fade-in-section" style="background-color: white;">
+        <div class="booking">
+            <h1>Let’s Get Started</h1>
+            <p>
+                Your journey to confident communication starts here. Whether you’re preparing for an important
+                presentation, working on interpersonal skills, or simply want to feel more comfortable speaking in
+                any situation, I’m ready to help you succeed.
+            </p>
+            <p>
+                <b>Book your free 30-minute consultation today</b> and take the first step toward mastering your communication!
+            </p>
+            <a href="https://youtu.be/boZFZuLy72w?si=WLw_cUrsi4laB5q4"><button>BOOK HERE FOR FREE INITIAL CONSULTATION</button></a>
+        </div>
+    </div>
+
+    <div id="footer" style="min-height: 5%;">
+        <script>
+            fetch('/fragments/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                });
+        </script>
     </div>
 </body>
 </html>
