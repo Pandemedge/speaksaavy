@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #caf0f8;
+    background-color: #90e0ef;
 }
   
 html, body {
@@ -95,7 +95,7 @@ nav ul li a{
     flex-direction: column;
     width: 60%;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #caf0f8;
     text-align: center;
     align-items: center;
     color: #5390ff;
@@ -140,7 +140,7 @@ nav ul li a{
     width: 40%;
     color: #5390ff;
     min-height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #caf0f8;
     text-align: center;
 }
 
