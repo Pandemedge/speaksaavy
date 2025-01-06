@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Main Page</title>
 
 </head>
 <body>
     <div id="header" style="min-height: 10%;">
         <script>
-            fetch('fragments/header.html')
+            fetch('./fragments/header.html')
                 .then(response => response.text())
                 .then(data => {
                 document.getElementById('header').innerHTML = data;
@@ -59,7 +59,7 @@
         </div>
 
         <div class="content2">
-            <img src="images/dog.jpg" alt="placeholder">
+            <img src="./images/dog.jpg" alt="placeholder">
         </div>
 
         <script>
@@ -98,7 +98,7 @@
 
     <div id="footer" style="min-height: 5%;">
         <script>
-            fetch('fragments/footer.html')
+            fetch('./fragments/footer.html')
                 .then(response => response.text())
                 .then(data => {
                 document.getElementById('footer').innerHTML = data;
