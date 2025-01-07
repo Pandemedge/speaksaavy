@@ -9,87 +9,89 @@
 
 </head>
 <body>
-    <div id="header" style="min-height: 10%;">
-        <script>
-            fetch('./fragments/header.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('header').innerHTML = data;
-                });
-        </script>
-    </div>
-
-    <div class="container">
-        <div class="content1">
-            <div class="fade-in-section">
-                <h1>Services & Pricing</h1>
-                <p style="border-bottom: 1px solid #5390ff; padding-bottom: 3%; flex-grow: 1; flex-basis: 0;">
-                    At Speak Savvy, I provide flexible and affordable communication coaching options to suit your
-                    needs and goals. Explore the services and pricing below to find what works best for you.
-                </p>
-                <br>
-                <p style="text-align: left;"><b>1:1 Online Coaching</b></p>
-                <ul>
-                    <li style="list-style-type: none;">
-                        Enjoy private, one-on-one sessions from anywhere. These virtual sessions are tailored to your
-                        specific goals, offering convenience and professional guidance.
-                    </li>
-                </ul>
-                <br>
-                <p style="text-align: left;"><b>1:1 In-Home Coaching</b></p>
-                <ul>
-                    <li>
-                        Experience personalized coaching in the comfort of your home. I’ll work with you to achieve your
-                        communication goals in a relaxed, familiar environment.
-                    </li>
-                    <li>
-                        <b>Note:</b> Travel costs may apply depending on your location.
-                    </li>
-                </ul>
-
-                <h1>Pricing</h1>
-                <h2>Initial Consultation</h2>
-                <ul>
-                    <li style="list-style-type: disc;">
-                        <b>30 Minutes:</b> FREE
-                    </li>
-                    <li style="list-style-type: none;">
-                        Let’s discuss your goals, challenges, and how I can help you succeed.
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="content2">
-        </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const fadeInSections = document.querySelectorAll(".fade-in-section");
-    
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("visible");
-                        }
+    <div class="content-wrapper">
+        <div id="header" style="min-height: 10%;">
+            <script>
+                fetch('./fragments/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                    document.getElementById('header').innerHTML = data;
                     });
-                }, { threshold: 0.1 });
-    
-                fadeInSections.forEach(section => {
-                    observer.observe(section);
-                });
-            });
-        </script>
-    </div>
+            </script>
+        </div>
 
-    <div id="footer" style="min-height: 5%;">
-        <script>
-            fetch('./fragments/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                document.getElementById('footer').innerHTML = data;
+        <div class="container">
+            <div class="content1">
+                <div class="fade-in-section">
+                    <h1>Services & Pricing</h1>
+                    <p style="border-bottom: 1px solid #5390ff; padding-bottom: 3%; flex-grow: 1; flex-basis: 0;">
+                        At Speak Savvy, I provide flexible and affordable communication coaching options to suit your
+                        needs and goals. Explore the services and pricing below to find what works best for you.
+                    </p>
+                    <br>
+                    <p style="text-align: left;"><b>1:1 Online Coaching</b></p>
+                    <ul>
+                        <li style="list-style-type: none;">
+                            Enjoy private, one-on-one sessions from anywhere. These virtual sessions are tailored to your
+                            specific goals, offering convenience and professional guidance.
+                        </li>
+                    </ul>
+                    <br>
+                    <p style="text-align: left;"><b>1:1 In-Home Coaching</b></p>
+                    <ul>
+                        <li>
+                            Experience personalized coaching in the comfort of your home. I’ll work with you to achieve your
+                            communication goals in a relaxed, familiar environment.
+                        </li>
+                        <li>
+                            <b>Note:</b> Travel costs may apply depending on your location.
+                        </li>
+                    </ul>
+
+                    <h1>Pricing</h1>
+                    <h2>Initial Consultation</h2>
+                    <ul>
+                        <li style="list-style-type: disc;">
+                            <b>30 Minutes:</b> FREE
+                        </li>
+                        <li style="list-style-type: none;">
+                            Let’s discuss your goals, challenges, and how I can help you succeed.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content2">
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const fadeInSections = document.querySelectorAll(".fade-in-section");
+        
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("visible");
+                            }
+                        });
+                    }, { threshold: 0.1 });
+        
+                    fadeInSections.forEach(section => {
+                        observer.observe(section);
+                    });
                 });
-        </script>
+            </script>
+        </div>
+
+        <div id="footer" style="min-height: 5%;">
+            <script>
+                fetch('./fragments/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                    });
+            </script>
+        </div>
     </div>
 </body>
 </html>
